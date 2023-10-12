@@ -1,0 +1,32 @@
+{
+  "name": "pumpkin-tags",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/pumpkin-tags.umd.cjs",
+  "module": "./dist/pumpkin-tags.js",
+  "exports": {
+    ".": {
+      "import": "./dist/pumpkin-tags.js",
+      "require": "./dist/pumpkin-tags.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc ",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
